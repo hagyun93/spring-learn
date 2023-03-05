@@ -1,4 +1,4 @@
-package hello.proxy.app.config;
+package hello.proxy.config;
 
 import hello.proxy.app.v2.OrderControllerV2;
 import hello.proxy.app.v2.OrderRepositoryV2;
@@ -15,9 +15,7 @@ public class AppV2Config {
     }
 
     @Bean
-    public OrderServiceV2 orderServiceV2() {
-        return new OrderServiceV2(orderRepositoryV2());
-    }
+    public OrderServiceV2 orderServiceV2() { return new OrderServiceV2(orderRepositoryV2()); }
 
     @Bean
     public OrderRepositoryV2 orderRepositoryV2() {
